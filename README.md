@@ -23,7 +23,7 @@ uv run uvicorn app.main:app --reload
 ## Environment Variables
 
 - OPENROUTER_API_KEY or OPENAI_API_KEY: Required for LLM generation.
-- CHROMA_DB_PATH: Local Chroma persistence path. Default: ./chroma_db
+- CHROMA_DB_PATH: Local Chroma persistence path. If not set, SemantiTag tries project chroma_db first, then falls back to a writable temp directory.
 - CHROMA_COLLECTION_NAME: Collection name. Default: semantitag_items
 - SEMANTITAG_VECTORIZE_TAGS: Whether to also store a separate tags vector document. Default: true
 
